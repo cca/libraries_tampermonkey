@@ -4,11 +4,11 @@
 // @version      1.0
 // @description  handy links & functions for staff use of Koha OPAC
 // @author       @phette23
-// @match        https?://library.cca.edu/cgi-bin/koha/opac-detail.pl?*
+// @match        https://library.cca.edu/cgi-bin/koha/opac-detail.pl?*
 // @grant        none
 // @require      http://code.jquery.com/jquery-latest.js
 // ==/UserScript==
-
+/*global $*/
 (function() {
     console.log('Running Koha Catalog for Staff script.')
 
