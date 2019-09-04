@@ -10,3 +10,7 @@ https://www.tampermonkey.net
 - From the extension's settings, click the **+** button to add a script
 - Copy/paste a script from here into the editor
 - **Save**
+
+## LICENSE
+
+[ECL Version 2.0](https://opensource.org/licenses/ECL-2.0)
