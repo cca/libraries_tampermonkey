@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Summon Broken Link Report
 // @namespace    https://libraries.cca.edu
-// @version      1.0
+// @version      1.0.0
 // @description  create formatted broken link report from Summon search result
 // @author       @phette23
 // @match        https://cca.summon.serialssolutions.com/*
