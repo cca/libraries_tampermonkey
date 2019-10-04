@@ -6,6 +6,7 @@
 // @author       @phette23
 // @match        https://docs.google.com/a/cca.edu/forms/d/e/*
 // @match        https://docs.google.com/forms/u/1/d/e/*
+// @match        https://docs.google.com/forms/d/e/*
 // @grant        none
 // @require      http://code.jquery.com/jquery-latest.js
 // ==/UserScript==
