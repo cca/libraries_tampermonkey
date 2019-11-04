@@ -8,7 +8,7 @@
 // @grant        none
 // @require      http://code.jquery.com/jquery-latest.js
 // ==/UserScript==
-/*global $*/
+/*global angular,$*/
 (function() {
     // expose metadata in global scope, note first item is query & then come results documents
     if (!window.docs) window.docs = angular.element('div[results-feed]').scope().feed.items
