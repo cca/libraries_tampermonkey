@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Summon Broken Link Report
+// @name         Summon Mods
 // @namespace    https://libraries.cca.edu
 // @version      1.0.0
-// @description  create formatted broken link report from Summon search result
+// @description  helpful modifications for the Summon discovery layer
 // @author       @phette23
 // @match        https://cca.summon.serialssolutions.com/*
 // @grant        none
@@ -10,6 +10,9 @@
 // ==/UserScript==
 /*global $*/
 (function() {
+    // expose metadata in global scope, note first item is query & then come results documents
+    if (!window.docs) window.docs = angular.element('div[results-feed]').scope().feed.items
+    // format metadata for use in Ex Libris support tickets
     window.report = () => {
         // support ticket text, to be copied to clipboard later
         var text = 'The link to this article\n\n'
