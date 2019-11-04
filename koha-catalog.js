@@ -7,6 +7,8 @@
 // @match        https://library.cca.edu/cgi-bin/koha/*
 // @grant        none
 // @require      http://code.jquery.com/jquery-latest.js
+// @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/master/koha-catalog.js
+// @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/master/koha-catalog.js
 // ==/UserScript==
 /*global $*/
 (function() {

@@ -1,17 +1,32 @@
 // ==UserScript==
 // @name         Summon Mods
 // @namespace    https://libraries.cca.edu
-// @version      1.1.0
+// @version      1.1.1
 // @description  helpful modifications for the Summon discovery layer
 // @author       @phette23
 // @match        https://cca.summon.serialssolutions.com/*
 // @grant        none
-// @require      http://code.jquery.com/jquery-latest.js
+// @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/master/summon.js
+// @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/master/summon.js
 // ==/UserScript==
 /*global angular,$*/
 (function() {
-    // expose metadata in global scope, note first item is query & then come results documents
-    if (!window.docs) window.docs = angular.element('div[results-feed]').scope().feed.items
+    // expose metadata in global scope
+    // note first item is query & then come results documents
+    let interval = setInterval(() => {
+        console.log('Tampermonkey: checking to see if results feed exists.')
+        if (document.querySelector('.documentSummary') && !window.docs) {
+            console.log('Found results feed, window.docs references it.')
+            // map to documents for those items, query & newsRollup will stay
+            // the same
+            window.docs = angular.element('div[results-feed]')
+                .scope().feed.items.map(item => {
+                    if (item.document) return item.document
+                    return item
+                })
+            clearInterval(interval)
+        }
+    }, 1000);
     // format metadata for use in Ex Libris support tickets
     window.report = () => {
         // support ticket text, to be copied to clipboard later
