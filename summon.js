@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Summon Mods
 // @namespace    https://libraries.cca.edu
-// @version      1.1.2
+// @version      1.2.0
 // @description  helpful modifications for the Summon discovery layer
 // @author       @phette23
 // @match        https://cca.summon.serialssolutions.com/*
@@ -53,5 +53,6 @@
         text += `fails to resolve correctly.\n\nSummon bookmark:\n${'https://cca.summon.serialssolutions.com/#!/search?bookMark=' + doc.bookmark}\n\nOpenURL:\n${doc.open_url}`
 
         prompt("Copy to clipboard with CMD+C", text)
+        open("https://exlibrisgroup--c.na62.visual.force.com/apex/vf_new_case", "_blank")
     }
 })();
