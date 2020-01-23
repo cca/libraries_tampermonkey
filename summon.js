@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Summon Mods
 // @namespace    https://libraries.cca.edu
-// @version      1.2.0
+// @version      1.2.1
 // @description  helpful modifications for the Summon discovery layer
 // @author       @phette23
 // @match        https://cca.summon.serialssolutions.com/*
