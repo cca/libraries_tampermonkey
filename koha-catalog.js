@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Koha Catalog for Staff
 // @namespace    https://libraries.cca.edu
-// @version      1.1.3
+// @version      1.1.4
 // @description  handy links & functions for staff use of Koha OPAC
 // @author       @phette23
 // @match        https://library.cca.edu/cgi-bin/koha/*
@@ -10,8 +10,9 @@
 // @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/master/koha-catalog.js
 // @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/master/koha-catalog.js
 // ==/UserScript==
-/*global $*/
-(function() {
+/*global jQuery,$*/
+$.noConflict();
+jQuery(document).ready(function($){
     console.log('Running Koha Catalog for Staff script.')
 
     // show all the "views": normal, marc, ISBD
@@ -33,4 +34,4 @@
     // show "print record" & "export" actions, these are hidden in our OpacUserJS
     $('.print-large').parent('li').show()
     $('#export').parent('li').show()
-})();
+})
