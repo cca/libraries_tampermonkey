@@ -7,8 +7,8 @@
 // @match        https://cca.summon.serialssolutions.com/*
 // @match        https://cca.preview.summon.serialssolutions.com/*
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/master/summon.js
-// @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/master/summon.js
+// @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/summon.js
+// @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/summon.js
 // ==/UserScript==
 /*global angular,$*/
 (function() {

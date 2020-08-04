@@ -9,8 +9,8 @@
 // @match        https://docs.google.com/forms/d/e/*
 // @grant        none
 // @require      http://code.jquery.com/jquery-latest.js
-// @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/master/refstats.js
-// @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/master/refstats.js
+// @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/refstats.js
+// @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/refstats.js
 // ==/UserScript==
 /*global $*/
 (function() {
