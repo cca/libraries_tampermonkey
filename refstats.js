@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         Refstats Interaction Templates
 // @namespace    https://libraries.cca.edu
-// @version      1.0.0
+// @version      1.1.0
 // @description  fill out common refstats interactions in a single click
 // @author       @phette23
 // @match        https://docs.google.com/a/cca.edu/forms/d/e/*
-// @match        https://docs.google.com/forms/u/1/d/e/*
+// @match        https://docs.google.com/forms/u/*/d/e/*
 // @match        https://docs.google.com/forms/d/e/*
 // @grant        none
-// @require      http://code.jquery.com/jquery-latest.js
+// @require      https://code.jquery.com/jquery-latest.js
 // @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/refstats.js
 // @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/refstats.js
 // ==/UserScript==
@@ -20,13 +20,13 @@
         for (let field of fields.split(',')) {
             $(`label:contains(${field})`).click()
         }
-        // @TODO click the submit button?
     }
 
     // only run on ref stats form
     if ($('[role="heading"]').first().text().trim().toLowerCase() == 'reference statistics form') {
         let defaults = [
             { title: "Faculty VAULT Q", fields: "Online,Service,Email,Faculty,VAULT" },
+            { title: "Moodle Tech Help", fields: "Online,Technical/Computing,Email,Moodle" },
         ]
         let html = '<br><div class="freebirdFormviewerViewNavigationButtonsAndProgress"><div class="freebirdFormviewerViewNavigationButtons">'
         defaults.forEach((tpl) => {
