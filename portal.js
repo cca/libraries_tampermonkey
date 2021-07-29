@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Remove student rosters from CCA Portal
 // @namespace    https://libraries.cca.edu
-// @version      1.1
+// @version      1.1.1
 // @description  for running workshops or creating demo videos where you do not want enrollment data visible
 // @author       @phette23
 // @match        https://portal.cca.edu/courses/sec/*
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/refstats.js
-// @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/refstats.js
+// @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/portal.js
+// @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/portal.js
 // ==/UserScript==
 
 (function() {
