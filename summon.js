@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         Summon Mods
 // @namespace    https://libraries.cca.edu
-// @version      1.2.2
+// @version      1.2.3
 // @description  helpful modifications for the Summon discovery layer
 // @author       @phette23
 // @match        https://cca.summon.serialssolutions.com/*
+// @match        https://cca-summon-serialssolutions-com.proxy.cca.edu/*
 // @match        https://cca.preview.summon.serialssolutions.com/*
 // @grant        none
 // @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/summon.js
