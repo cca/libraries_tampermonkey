@@ -1,10 +1,11 @@
 // ==UserScript==
-// @name         Remove student rosters from CCA Portal
+// @name         Clean Portal for Screenrecording
 // @namespace    https://libraries.cca.edu
-// @version      1.1.1
-// @description  for running workshops or creating demo videos where you do not want enrollment data visible
+// @version      1.2.0
+// @description  hide Portal enrollment data & green "preview header" on Staging
 // @author       @phette23
-// @match        https://portal.cca.edu/courses/sec/*
+// @match        https://portal.cca.edu/*
+// @match        https://portal-staging.cca.edu/*
 // @grant        none
 // @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/portal.js
 // @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/portal.js
@@ -12,5 +13,7 @@
 
 (function() {
     'use strict';
-    document.querySelectorAll('.learning-hub__student-roster-list li').forEach(el => el.parentNode.removeChild(el));
+    let d = document
+    d.querySelectorAll('.learning-hub__student-roster-list li').forEach(el => el.remove())
+    d.getElementById('preview-header').remove()
 })();
