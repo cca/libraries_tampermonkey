@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Refstats Interaction Templates
 // @namespace    https://libraries.cca.edu
-// @version      1.1.1
+// @version      1.2.0
 // @description  fill out common refstats interactions in a single click
 // @author       @phette23
 // @match        https://docs.google.com/a/cca.edu/forms/d/e/*
@@ -25,8 +25,9 @@
     // only run on ref stats form
     if ($('[role="heading"]').first().text().trim().toLowerCase() == 'reference statistics form') {
         let defaults = [
-            { title: "Faculty VAULT Q", fields: "Online,Service,Email,Faculty,VAULT" },
-            { title: "Moodle Tech Help", fields: "Online,Technical/Computing,Email,Faculty,Moodle" },
+            { title: "Fac Portal Email", fields: "Online,Technical/Computing,Email,Faculty,Portal" },
+            { title: "Moo Tech Chat", fields: "Online,Technical/Computing,Chat,Faculty,Moodle" },
+            { title: "Moo Tech Email", fields: "Online,Technical/Computing,Email,Faculty,Moodle" },
         ]
         let html = '<br><div class="freebirdFormviewerViewNavigationButtonsAndProgress"><div class="freebirdFormviewerViewNavigationButtons">'
         defaults.forEach((tpl) => {
