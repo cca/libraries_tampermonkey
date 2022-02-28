@@ -29,12 +29,13 @@
             { title: "Moo Tech Chat", fields: "Online,Technical/Computing,Chat,Faculty,Moodle" },
             { title: "Moo Tech Email", fields: "Online,Technical/Computing,Email,Faculty,Moodle" },
         ]
-        let html = '<br><div class="freebirdFormviewerViewNavigationButtonsAndProgress"><div class="freebirdFormviewerViewNavigationButtons">'
+        let html = '<br style="display:block; clear:both; width:100%; content: \'\';"><h3>Response Templates:</h3>'
         defaults.forEach((tpl) => {
-            html += `<div role="button" class="js-tampermonkey quantumWizButtonEl quantumWizButtonPaperbuttonEl quantumWizButtonPaperbuttonFlat quantumWizButtonPaperbuttonDark quantumWizButtonPaperbutton2El2 freebirdFormviewerViewNavigationSubmitButton isUndragged"><div class="quantumWizButtonPaperbuttonFocusOverlay exportOverlay"></div><span class="quantumWizButtonPaperbuttonContent"><span class="quantumWizButtonPaperbuttonLabel exportLabel" data-fields="${tpl.fields}">${tpl.title}</span></span></div>&nbsp;`
+            html += `<div style="cursor:pointer; color:blue" role="button" class="js-tampermonkey" data-fields="${tpl.fields}">${tpl.title}</div>&nbsp;|&nbsp;`
         })
-        $('.freebirdFormviewerViewHeaderTitleRow').after(html)
+        $('.freebirdFormviewerViewHeaderTitleRow, [role="heading"]').first().after(html)
         $('.js-tampermonkey').click((event) => {
+            event.preventDefault()
             let fields = $(event.target).data('fields')
             if (fields) fillOutForm(fields)
         })
