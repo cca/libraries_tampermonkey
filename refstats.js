@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Refstats Interaction Templates
 // @namespace    https://libraries.cca.edu
-// @version      1.2.0
+// @version      1.3.0
 // @description  fill out common refstats interactions in a single click
 // @author       @phette23
 // @match        https://docs.google.com/a/cca.edu/forms/d/e/*
