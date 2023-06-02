@@ -17,7 +17,7 @@ https://www.tampermonkey.net
 
 **portal.js** - hide student rosters/enrollment data for course sections, this is useful for recording screencasts of Portal content where we cannot expose student names.
 
-**refstats.js** - creates a "Faculty VAULT Q" button on the ref stats form that, when clicked, fills out an "Online, Service, Email, Faculty, VAULT" interaction. That's an incredibly common stat for the Systems Librarian. We could create additional buttons for other common interactions.
+**refstats.js** - auto-selects the user's email address, creates common interaction templates (e.g. for faculty Moodle chats). We could create additional buttons for other common interactions.
 
 **summon.js** - creates a `report()` function for use in the browser's JavaScript console which copies metadata from the first search result and opens the Ex Libris support page. This is used to send broken link reports with certain stock information pre-filled in them.
 
