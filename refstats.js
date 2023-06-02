@@ -39,5 +39,7 @@
             let fields = $(event.target).data('fields')
             if (fields) fillOutForm(fields)
         })
+        // auto-select email address
+        $('div[data-user-email-address]').find('label').click()
     }
 })();
