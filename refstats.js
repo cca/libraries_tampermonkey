@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Refstats Interaction Templates
 // @namespace    https://libraries.cca.edu
-// @version      1.5.0
+// @version      1.6.0
 // @description  fill out common refstats interactions in a single click
 // @author       @phette23
 // @match        https://docs.google.com/a/cca.edu/forms/d/e/*
@@ -40,6 +40,7 @@
             if (fields) fillOutForm(fields)
         })
         // auto-select email address
-        $('div[data-user-email-address]').find('div[role="checkbox"]').click()
+        let email = $('div[data-user-email-address]').find('div[role="checkbox"]')
+        if (email.attr('aria-checked') === 'false') email.click()
     }
 })();
