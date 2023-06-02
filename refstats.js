@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         Refstats Interaction Templates
 // @namespace    https://libraries.cca.edu
-// @version      1.4.0
+// @version      1.5.0
 // @description  fill out common refstats interactions in a single click
 // @author       @phette23
 // @match        https://docs.google.com/a/cca.edu/forms/d/e/*
 // @match        https://docs.google.com/forms/u/*/d/e/*
 // @match        https://docs.google.com/forms/d/e/*
 // @grant        none
-// @require      https://code.jquery.com/jquery-latest.js
+// @require      https://code.jquery.com/jquery-3.7.0.slim.min.js
 // @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/refstats.js
 // @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/refstats.js
 // ==/UserScript==
@@ -40,6 +40,6 @@
             if (fields) fillOutForm(fields)
         })
         // auto-select email address
-        $('div[data-user-email-address]').find('label').click()
+        $('div[data-user-email-address]').find('div[role="checkbox"]').click()
     }
 })();
