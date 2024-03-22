@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Koha Catalog for Staff
 // @namespace    https://libraries.cca.edu
-// @version      1.1.4
+// @version      1.2.0
 // @description  handy links & functions for staff use of Koha OPAC
 // @author       @phette23
 // @match        https://library.cca.edu/cgi-bin/koha/*
@@ -25,7 +25,7 @@ jQuery(document).ready(function($){
     var title = encodeURIComponent($('h1.title').text())
 
     var staff_url = 'https://library-staff.cca.edu/cgi-bin/koha/catalogue/detail.pl?biblionumber=' + id
-    var summon_url = 'https://cca.summon.serialssolutions.com/#!/search?l=en&q=' + title
+    var summon_url = 'https://cca.summon.serialssolutions.com/#!/search?fvf=SourceType,Library%20Catalog&q=' + title
 
     views.append(`<span class="view"><a id="staffView" href="${staff_url}" style="background-position:-10px -56px;">Staff</a></span>`)
     // title is null on ISBD view
