@@ -11,7 +11,7 @@
 // @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/koha-catalog.js
 // ==/UserScript==
 /*global jQuery,$*/
-$.noConflict();
+$.noConflict()
 jQuery(document).ready(function($){
     console.log('Running Koha Catalog for Staff script.')
 

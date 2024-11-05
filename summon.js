@@ -11,7 +11,7 @@
 // @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/summon.js
 // @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/summon.js
 // ==/UserScript==
-/*global angular,$*/
+/*global angular*/
 (function() {
     // expose metadata in global scope
     // note first item is query & then come results documents
@@ -28,7 +28,7 @@
                 })
             clearInterval(interval)
         }
-    }, 1000);
+    }, 1000)
     // format metadata for use in Ex Libris support tickets
     window.report = () => {
         // support ticket text, to be copied to clipboard later
@@ -56,4 +56,4 @@
         prompt("Copy to clipboard with CMD+C", text)
         open("https://support.proquest.com/s/login", "_blank")
     }
-})();
+})()

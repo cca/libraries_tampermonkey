@@ -10,10 +10,9 @@
 // @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/portal.js
 // @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/portal.js
 // ==/UserScript==
-
 (function() {
-    'use strict';
+    'use strict'
     let d = document
     d.querySelectorAll('.learning-hub__student-roster-list li').forEach(el => el.remove())
     d.getElementById('preview-header').remove()
-})();
+})()

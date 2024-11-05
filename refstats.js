@@ -11,7 +11,6 @@
 // @updateURL    https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/refstats.js
 // @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/refstats.js
 // ==/UserScript==
-/*global trustedTypes*/
 (function() {
     console.log('Running Refstats Interaction Templates script.')
     const d = document
@@ -52,7 +51,7 @@
         d.querySelectorAll('.js-tampermonkey').forEach(element => {
             element.addEventListener('click', (event) => {
                 event.preventDefault()
-                let fields = event.target.dataset.fields;
+                let fields = event.target.dataset.fields
                 if (fields) fillOutForm(fields)
             })
         })
@@ -60,4 +59,4 @@
         let email = d.querySelector('div[data-user-email-address]').querySelector('div[role="checkbox"]')
         if (email.ariaChecked === 'false') email.click()
     }
-})();
+})()
