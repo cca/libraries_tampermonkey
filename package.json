@@ -1,0 +1,31 @@
+{
+  "name": "cca_libraries_tampermonkey",
+  "version": "1.0.0",
+  "description": "tampermonkey scripts for CCA Libraries",
+  "scripts": {
+    "test": "eslint --cache ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cca/libraries_tampermonkey.git"
+  },
+  "keywords": [
+    "koha",
+    "tampermonkey",
+    "summon",
+    "watermark",
+    "google",
+    "forms"
+  ],
+  "author": "phette23 <phette23@gmail.com> (https://phette.net/)",
+  "license": "ECL-2.0",
+  "bugs": {
+    "url": "https://github.com/cca/libraries_tampermonkey/issues"
+  },
+  "homepage": "https://github.com/cca/libraries_tampermonkey#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "eslint": "^9.14.0",
+    "globals": "^15.12.0"
+  }
+}
