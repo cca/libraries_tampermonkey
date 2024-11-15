@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "tampermonkey scripts for CCA Libraries",
   "scripts": {
+    "lint": "eslint --cache .",
     "test": "eslint --cache ."
   },
   "repository": {
