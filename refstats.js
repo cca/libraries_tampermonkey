@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Refstats Interaction Templates
+// @name         Ref Stats Interaction Templates
 // @namespace    https://libraries.cca.edu
-// @version      2.0.0
-// @description  fill out common refstats interactions in a single click
+// @version      2.1.0
+// @description  fill out common ref stats interactions in a single click
 // @author       @phette23
 // @match        https://docs.google.com/a/cca.edu/forms/d/e/*
 // @match        https://docs.google.com/forms/u/*/d/e/*
@@ -12,7 +12,7 @@
 // @downloadURL  https://raw.githubusercontent.com/cca/libraries_tampermonkey/main/refstats.js
 // ==/UserScript==
 (function() {
-    console.log('Running Refstats Interaction Templates script.')
+    console.log('Running Ref Stats Interaction Templates script.')
     const d = document
 
     function fillOutForm(fields) {
@@ -55,8 +55,10 @@
                 if (fields) fillOutForm(fields)
             })
         })
+
         // auto-select email address
-        let email = d.querySelector('div[data-user-email-address]').querySelector('div[role="checkbox"]')
-        if (email.ariaChecked === 'false') email.click()
+        let email = d.querySelector('div[data-user-email-address]')
+        let emailCheckbox = email && email.querySelector('div[role="checkbox"]')
+        if (emailCheckbox && emailCheckbox.ariaChecked === 'false') emailCheckbox.click()
     }
 })()
