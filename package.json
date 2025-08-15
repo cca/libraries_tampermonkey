@@ -16,7 +16,8 @@
     "summon",
     "watermark",
     "google",
-    "forms"
+    "forms",
+    "panopto"
   ],
   "author": "phette23 <phette23@gmail.com> (https://phette.net/)",
   "license": "ECL-2.0",
@@ -25,8 +26,8 @@
   },
   "homepage": "https://github.com/cca/libraries_tampermonkey#readme",
   "devDependencies": {
-    "@eslint/js": "^9.31.0",
-    "eslint": "^9.31.0",
+    "@eslint/js": "^9.33.0",
+    "eslint": "^9.33.0",
     "globals": "^16.3.0"
   }
 }
