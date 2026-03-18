@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Koha Catalog for Staff
 // @namespace    https://libraries.cca.edu
-// @version      1.4.0
+// @version      1.4.1
 // @description  handy links & functions for staff use of Koha OPAC
 // @author       @phette23
 // @match        https://library.cca.edu/cgi-bin/koha/*
