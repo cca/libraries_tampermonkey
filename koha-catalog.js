@@ -28,9 +28,13 @@ runWhenJQueryLoaded(function($) {
 
             // insert links to edit & view record on staff side
             const id = new URLSearchParams(location.search).get('biblionumber')
-            if (id) {
-                views.append(`<span class="view"><a id="staffView" href="https://library-staff.cca.edu/cgi-bin/koha/cataloguing/editor.pl#catalog/${id}" style="background-position:-10px -56px;">Edit MARC</a></span>`)
-                views.append(`<span class="view"><a id="staffView" href="https://library-staff.cca.edu/cgi-bin/koha/catalogue/detail.pl?biblionumber=${id}" style="background-position:-10px -56px;">Staff</a></span>`)
+            if (id && id.match(/^\d+$/)) {
+                views.append(
+                    `<span class="view"><a id="staffView" href="https://library-staff.cca.edu/cgi-bin/koha/cataloguing/editor.pl#catalog/${id}" style="background-position:-10px -56px;">Edit MARC</a></span>`,
+                )
+                views.append(
+                    `<span class="view"><a id="staffView" href="https://library-staff.cca.edu/cgi-bin/koha/catalogue/detail.pl?biblionumber=${id}" style="background-position:-10px -56px;">Staff</a></span>`,
+                )
             }
 
             // link to Summon search, title is null in ISBD view
